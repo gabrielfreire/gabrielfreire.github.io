@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Gabriel Freire</title>
+    <!--<base href="/" />-->
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="_content/MatBlazor/dist/matBlazor.css" rel="stylesheet" />
+    <script src="_content/MatBlazor/dist/matBlazor.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://kit.fontawesome.com/7d2c80ea54.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        svg.tea {
+            --secondary: #33406f;
+        }
+
+            svg.tea #teabag {
+                transform-origin: top center;
+                transform: rotate(3deg);
+                animation: swing 2s infinite;
+            }
+
+            svg.tea #steamL {
+                stroke-dasharray: 13;
+                stroke-dashoffset: 13;
+                animation: steamLarge 2s infinite;
+            }
+
+            svg.tea #steamR {
+                stroke-dasharray: 9;
+                stroke-dashoffset: 9;
+                animation: steamSmall 2s infinite;
+            }
+
+        @-moz-keyframes swing {
+            50% {
+                transform: rotate(-3deg);
+            }
+        }
+
+        @-webkit-keyframes swing {
+            50% {
+                transform: rotate(-3deg);
+            }
+        }
+
+        @-o-keyframes swing {
+            50% {
+                transform: rotate(-3deg);
+            }
+        }
+
+        @keyframes swing {
+            50% {
+                transform: rotate(-3deg);
+            }
+        }
+
+        @-moz-keyframes steamLarge {
+            0% {
+                stroke-dashoffset: 13;
+                opacity: 0.6;
+            }
+
+            100% {
+                stroke-dashoffset: 39;
+                opacity: 0;
+            }
+        }
+
+        @-webkit-keyframes steamLarge {
+            0% {
+                stroke-dashoffset: 13;
+                opacity: 0.6;
+            }
+
+            100% {
+                stroke-dashoffset: 39;
+                opacity: 0;
+            }
+        }
+
+        @-o-keyframes steamLarge {
+            0% {
+                stroke-dashoffset: 13;
+                opacity: 0.6;
+            }
+
+            100% {
+                stroke-dashoffset: 39;
+                opacity: 0;
+            }
+        }
+
+        @keyframes steamLarge {
+            0% {
+                stroke-dashoffset: 13;
+                opacity: 0.6;
+            }
+
+            100% {
+                stroke-dashoffset: 39;
+                opacity: 0;
+            }
+        }
+
+        @-moz-keyframes steamSmall {
+            10% {
+                stroke-dashoffset: 9;
+                opacity: 0.6;
+            }
+
+            80% {
+                stroke-dashoffset: 27;
+                opacity: 0;
+            }
+
+            100% {
+                stroke-dashoffset: 27;
+                opacity: 0;
+            }
+        }
+
+        @-webkit-keyframes steamSmall {
+            10% {
+                stroke-dashoffset: 9;
+                opacity: 0.6;
+            }
+
+            80% {
+                stroke-dashoffset: 27;
+                opacity: 0;
+            }
+
+            100% {
+                stroke-dashoffset: 27;
+                opacity: 0;
+            }
+        }
+
+        @-o-keyframes steamSmall {
+            10% {
+                stroke-dashoffset: 9;
+                opacity: 0.6;
+            }
+
+            80% {
+                stroke-dashoffset: 27;
+                opacity: 0;
+            }
+
+            100% {
+                stroke-dashoffset: 27;
+                opacity: 0;
+            }
+        }
+
+        @keyframes steamSmall {
+            10% {
+                stroke-dashoffset: 9;
+                opacity: 0.6;
+            }
+
+            80% {
+                stroke-dashoffset: 27;
+                opacity: 0;
+            }
+
+            100% {
+                stroke-dashoffset: 27;
+                opacity: 0;
+            }
+        }
+
+    </style>
+</head>
+
+<body class="mat">
+    <app style="display:flex;">
+
+        <svg class="tea" width="37" height="48" viewbox="0 0 37 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27.0819 17H3.02508C1.91076 17 1.01376 17.9059 1.0485 19.0197C1.15761 22.5177 1.49703 29.7374 2.5 34C4.07125 40.6778 7.18553 44.8868 8.44856 46.3845C8.79051 46.79 9.29799 47 9.82843 47H20.0218C20.639 47 21.2193 46.7159 21.5659 46.2052C22.6765 44.5687 25.2312 40.4282 27.5 34C28.9757 29.8188 29.084 22.4043 29.0441 18.9156C29.0319 17.8436 28.1539 17 27.0819 17Z" stroke="var(--secondary)" stroke-width="2"></path>
+            <path d="M29 23.5C29 23.5 34.5 20.5 35.5 25.4999C36.0986 28.4926 34.2033 31.5383 32 32.8713C29.4555 34.4108 28 34 28 34" stroke="var(--secondary)" stroke-width="2"></path>
+            <path id="teabag" fill="var(--secondary)" fill-rule="evenodd" clip-rule="evenodd" d="M16 25V17H14V25H12C10.3431 25 9 26.3431 9 28V34C9 35.6569 10.3431 37 12 37H18C19.6569 37 21 35.6569 21 34V28C21 26.3431 19.6569 25 18 25H16ZM11 28C11 27.4477 11.4477 27 12 27H18C18.5523 27 19 27.4477 19 28V34C19 34.5523 18.5523 35 18 35H12C11.4477 35 11 34.5523 11 34V28Z"></path>
+            <path id="steamL" d="M17 1C17 1 17 4.5 14 6.5C11 8.5 11 12 11 12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="var(--secondary)"></path>
+            <path id="steamR" d="M21 6C21 6 21 8.22727 19 9.5C17 10.7727 17 13 17 13" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+    </app>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <!-- Start Single Page Apps for GitHub Pages -->
+    <script type="text/javascript">
+        // Single Page Apps for GitHub Pages
+        // https://github.com/rafrex/spa-github-pages
+        // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
+        // ----------------------------------------------------------------------
+        // This script checks to see if a redirect is present in the query string
+        // and converts it back into the correct url and adds it to the
+        // browser's history using window.history.replaceState(...),
+        // which won't cause the browser to attempt to load the new url.
+        // When the single page app is loaded further down in this file,
+        // the correct url will be waiting in the browser's history for
+        // the single page app to route accordingly.
+        (function (l) {
+            if (l.search) {
+                var q = {};
+                l.search.slice(1).split('&').forEach(function (v) {
+                    var a = v.split('=');
+                    q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
+                });
+                if (q.p !== undefined) {
+                    window.history.replaceState(null, null,
+                        l.pathname.slice(0, -1) + (q.p || '') +
+                        (q.q ? ('?' + q.q) : '') +
+                        l.hash
+                    );
+                }
+            }
+        }(window.location))
+    </script>
+
+    <script src="_framework/blazor.webassembly.js"></script>
+</body>
+
+</html>

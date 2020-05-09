@@ -151,7 +151,14 @@ app {
     top: 0.5rem;
 }
 
+.padding-responsive {
+    padding: 3rem !important;
+}
+
 @media (max-width: 767.98px) {
+    .padding-responsive {
+        padding: 0.5rem !important;
+    }
     .main .top-row:not(.auth) {
         display: none;
     }
@@ -166,6 +173,9 @@ app {
 }
 
 @media (min-width: 768px) {
+    .padding-responsive {
+        padding: 7rem !important;
+    }
     app {
         flex-direction: row;
     }
@@ -194,5 +204,10 @@ app {
     .sidebar .collapse {
         /* Never collapse the sidebar for wide screens */
         display: block;
+    }
+}
+@media (min-width: 1300px) {
+    .padding-responsive {
+        padding: 20rem !important;
     }
 }

@@ -1,0 +1,10 @@
+[
+  {
+    "Name": "SmartHealthService",
+    "Url": "http://23.97.129.185:8080"
+  },
+  {
+    "Name": "LexChatbotService",
+    "Url": "http://23.97.129.185:8082"
+  }
+]
